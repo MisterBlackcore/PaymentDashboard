@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartView" customModule="PaymentDashboard" customModuleProvider="target">
+            <connections>
+                <outlet property="chartNameLabel" destination="CpF-kO-rkx" id="MyQ-7E-HrA"/>
+                <outlet property="chartView" destination="AxU-0U-h1k" id="Tau-Pc-o6R"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="O11-Se-cfL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="226"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5f4-QQ-k4A">
+                    <rect key="frame" x="0.0" y="10" width="427" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpF-kO-rkx">
+                            <rect key="frame" x="10" y="0.0" width="407" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="CpF-kO-rkx" firstAttribute="leading" secondItem="5f4-QQ-k4A" secondAttribute="leading" constant="10" id="6ex-36-gL3"/>
+                        <constraint firstAttribute="bottom" secondItem="CpF-kO-rkx" secondAttribute="bottom" id="Ac4-TB-SXV"/>
+                        <constraint firstItem="CpF-kO-rkx" firstAttribute="top" secondItem="5f4-QQ-k4A" secondAttribute="top" id="QNS-iw-dJi"/>
+                        <constraint firstAttribute="trailing" secondItem="CpF-kO-rkx" secondAttribute="trailing" constant="10" id="gpF-fO-xZK"/>
+                        <constraint firstAttribute="height" constant="50" id="x3Z-Ha-h3w"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-0U-h1k" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="5" y="70" width="417" height="126"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AxU-0U-h1k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="QG0-tc-Jtj"/>
+                <constraint firstItem="5f4-QQ-k4A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SO6-vI-B2W"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AxU-0U-h1k" secondAttribute="trailing" constant="5" id="Ugq-Y9-Fx0"/>
+                <constraint firstItem="5f4-QQ-k4A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="fZV-dw-xnk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5f4-QQ-k4A" secondAttribute="trailing" id="hPM-bD-5bP"/>
+                <constraint firstAttribute="bottom" secondItem="AxU-0U-h1k" secondAttribute="bottom" constant="30" id="lB3-Ja-6dH"/>
+                <constraint firstItem="AxU-0U-h1k" firstAttribute="top" secondItem="5f4-QQ-k4A" secondAttribute="bottom" constant="10" id="vRg-oV-IY0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="147.10144927536234" y="-125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

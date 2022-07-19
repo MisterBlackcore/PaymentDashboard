@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment Dashboard View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PaymentDashboardViewController" customModule="PaymentDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-eu-gvk" customClass="HeaderView" customModule="PaymentDashboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9ih-ho-LXM"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xRQ-cf-cUr">
+                                <rect key="frame" x="20" y="304" width="374" height="558"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="dyD-jm-4LI"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="blh-yE-3Ly"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffn-fi-Jze" customClass="ChartContainerView" customModule="PaymentDashboard" customModuleProvider="target">
+                                <rect key="frame" x="15" y="84" width="384" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="dd2-oz-Ca5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KU6-eu-gvk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1ZQ-fY-D4Y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xRQ-cf-cUr" secondAttribute="trailing" constant="20" id="5fc-px-Uf0"/>
+                            <constraint firstItem="Ffn-fi-Jze" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="6AN-G8-mcw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KU6-eu-gvk" secondAttribute="trailing" id="FsP-pK-Sc6"/>
+                            <constraint firstItem="KU6-eu-gvk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YVd-Za-J4L"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xRQ-cf-cUr" secondAttribute="bottom" id="cqI-Tr-tRO"/>
+                            <constraint firstItem="xRQ-cf-cUr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lJQ-qY-19X"/>
+                            <constraint firstItem="Ffn-fi-Jze" firstAttribute="top" secondItem="KU6-eu-gvk" secondAttribute="bottom" id="lly-JM-Rzq"/>
+                            <constraint firstItem="xRQ-cf-cUr" firstAttribute="top" secondItem="Ffn-fi-Jze" secondAttribute="bottom" id="poy-O5-PGH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ffn-fi-Jze" secondAttribute="trailing" constant="15" id="tj8-tp-9Db"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartContainerView" destination="Ffn-fi-Jze" id="7cB-b0-RYA"/>
+                        <outlet property="headerView" destination="KU6-eu-gvk" id="Neb-bG-vLW"/>
+                        <outlet property="paymentDashboardTableView" destination="xRQ-cf-cUr" id="diY-CO-N59"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
