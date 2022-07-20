@@ -37,7 +37,6 @@ final private class DollarYAxisValueFormatter : NSObject, AxisValueFormatter {
     }
     
     private func getStringFromValue(value: Double) -> String {
-        print(value)
         return value < 1000 ? "$\(Int(value))" : "$\(Int(value / 1000))K"
     }
 }

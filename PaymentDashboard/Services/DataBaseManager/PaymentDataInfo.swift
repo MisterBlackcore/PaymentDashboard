@@ -76,7 +76,7 @@ final class PaymentDataInfo {
                     paymentDate: getEarlierDate(numberOfDays: 4),
                     status: "pending"),
         PaymentInfo(payerName: "Spawn",
-                    payerEmail: "good@gamil.com",
+                    payerEmail: "goodbadhellspawn300@gamil.com",
                     payerPhone: nil,
                     amount: 10.55,
                     paymentDate: getEarlierDate(numberOfDays: 10),

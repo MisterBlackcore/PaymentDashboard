@@ -53,6 +53,7 @@ class CredentialView: UIView {
     
     private func setupCredentialInfoLabelAttributes() {
         credentialInfoLabel.font = FontService.sourceSanProExtraLight.getFont(size: 14)
+        credentialInfoLabel.adjustsFontSizeToFitWidth = true
     }
     
     //MARK: - Actions
