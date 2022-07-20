@@ -42,7 +42,6 @@ final class ChartView: UIView {
         
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
-        xAxis.setLabelCount(3, force: true)
         xAxis.avoidFirstLastClippingEnabled = true
         xAxis.drawGridLinesEnabled = false
         
@@ -83,6 +82,7 @@ final class ChartView: UIView {
         chartView.xAxis.valueFormatter = ChartValueFromatter.getBasicStringValueFormatter(for: stringXAxisData)
         chartView.rightAxis.valueFormatter = ChartValueFromatter.getDollarValueFormatter()
         chartView.rightAxis.axisMinimum = 0
+        chartView.xAxis.setLabelCount(data.count, force: true)
     }
     
     private func configureSet(with data: [ChartDataEntry]) -> LineChartDataSet {
