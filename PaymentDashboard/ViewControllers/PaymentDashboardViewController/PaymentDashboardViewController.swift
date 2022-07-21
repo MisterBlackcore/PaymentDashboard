@@ -19,6 +19,7 @@ final class PaymentDashboardViewController: UIViewController {
     //MARK: - Functions
     private func setupUI() {
         headerView.configureHeader(with: "Payment Dashboard")
+        chartContainerView.configureChartName(with: "Collections")
         CellRegisterService.registerTableViewCell(in: paymentDashboardTableView, with: PersonInfoTableViewCell.identifier)
     }
     
@@ -34,7 +35,6 @@ final class PaymentDashboardViewController: UIViewController {
     }
     
     private func setupChartContainerView() {
-        chartContainerView.configureChartName(with: "Collections")
         chartContainerView.configureChart(with: viewModel.getChartData())
     }
 }
