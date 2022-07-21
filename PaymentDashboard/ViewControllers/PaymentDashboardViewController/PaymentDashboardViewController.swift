@@ -30,12 +30,8 @@ final class PaymentDashboardViewController: UIViewController {
     }
     
     private func setupViewsAfterLoading() {
-        setupChartContainerView()
-        paymentDashboardTableView.reloadData()
-    }
-    
-    private func setupChartContainerView() {
         chartContainerView.configureChart(with: viewModel.getChartData())
+        paymentDashboardTableView.reloadData()
     }
 }
 
