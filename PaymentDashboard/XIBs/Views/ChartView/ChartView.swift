@@ -55,10 +55,8 @@ final class ChartView: UIView {
         chartNameLabel.textColor = textColor
     }
     
-    func configureChart(with data: Any, option: ChartConfiguration) {
-        guard let data = data as? [ChartDataEntry] else {
-            return
-        }
+    func configureChart(with chartViewData: ChartViewData, option: ChartConfiguration) {
+        let data = chartViewData.chartViewData
         applyChartConfiguration(option: option, data: data)
         let set = configureSet(with: data)
         let chartViewData = configureLineChartData(with: set)
@@ -82,7 +80,9 @@ final class ChartView: UIView {
         chartView.xAxis.valueFormatter = ChartValueFromatter.getBasicStringValueFormatter(for: stringXAxisData)
         chartView.rightAxis.valueFormatter = ChartValueFromatter.getDollarValueFormatter()
         chartView.rightAxis.axisMinimum = 0
-        chartView.xAxis.setLabelCount(data.count, force: true)
+        let maxLabelCount = 8
+        let currentLabelCount = data.count < 8 ? data.count : maxLabelCount
+        chartView.xAxis.setLabelCount(currentLabelCount, force: true)
     }
     
     private func configureSet(with data: [ChartDataEntry]) -> LineChartDataSet {

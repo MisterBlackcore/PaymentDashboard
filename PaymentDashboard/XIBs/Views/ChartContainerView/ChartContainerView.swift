@@ -38,7 +38,7 @@ final class ChartContainerView: UIView {
                                      textColor: textColor)
     }
     
-    func configureChart(with data: Any) {
-        chartView.configureChart(with: data, option: .paymentInfo)
+    func configureChart(with chartViewData: ChartViewData) {
+        chartView.configureChart(with: chartViewData, option: .paymentInfo)
     }
 }

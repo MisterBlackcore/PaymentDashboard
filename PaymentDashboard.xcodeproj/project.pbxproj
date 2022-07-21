@@ -28,6 +28,7 @@
 		5184F6172884C2570066C65D /* ImageAssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184F6162884C2570066C65D /* ImageAssetService.swift */; };
 		5184F6192884C9FB0066C65D /* PaymentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184F6182884C9FB0066C65D /* PaymentInfo.swift */; };
 		5184F61B2884CB9F0066C65D /* PaymentDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184F61A2884CB9F0066C65D /* PaymentDataInfo.swift */; };
+		519AA152288869BE00BDEBB5 /* ChartViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AA151288869BE00BDEBB5 /* ChartViewData.swift */; };
 		51B163B828855C1900D4291F /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163B728855C1900D4291F /* DataBaseManager.swift */; };
 		51B163BC2885613700D4291F /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B163BB2885613700D4291F /* ChartView.xib */; };
 		51B163BE2885614700D4291F /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163BD2885614700D4291F /* ChartView.swift */; };
@@ -37,7 +38,6 @@
 		51B163CC28859BF000D4291F /* PaymentInfoChartDataEntryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163CB28859BF000D4291F /* PaymentInfoChartDataEntryManager.swift */; };
 		51B163D02885A73400D4291F /* ChartValueFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163CF2885A73400D4291F /* ChartValueFormater.swift */; };
 		51B163D32886EE8600D4291F /* PaymentDashboardVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163D22886EE8600D4291F /* PaymentDashboardVCViewModel.swift */; };
-		51B163D52886EECF00D4291F /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B163D42886EECF00D4291F /* BasicViewModel.swift */; };
 		99B7608AD5C989F0347493A3 /* Pods_PaymentDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571965BB97911DF994B972D9 /* Pods_PaymentDashboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +66,7 @@
 		5184F6162884C2570066C65D /* ImageAssetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssetService.swift; sourceTree = "<group>"; };
 		5184F6182884C9FB0066C65D /* PaymentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfo.swift; sourceTree = "<group>"; };
 		5184F61A2884CB9F0066C65D /* PaymentDataInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataInfo.swift; sourceTree = "<group>"; };
+		519AA151288869BE00BDEBB5 /* ChartViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewData.swift; sourceTree = "<group>"; };
 		51B163B728855C1900D4291F /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		51B163BB2885613700D4291F /* ChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 		51B163BD2885614700D4291F /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		51B163CB28859BF000D4291F /* PaymentInfoChartDataEntryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoChartDataEntryManager.swift; sourceTree = "<group>"; };
 		51B163CF2885A73400D4291F /* ChartValueFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueFormater.swift; sourceTree = "<group>"; };
 		51B163D22886EE8600D4291F /* PaymentDashboardVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDashboardVCViewModel.swift; sourceTree = "<group>"; };
-		51B163D42886EECF00D4291F /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
 		571965BB97911DF994B972D9 /* Pods_PaymentDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C325CC16CC8A74C4F9E458F3 /* Pods-PaymentDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentDashboard.debug.xcconfig"; path = "Target Support Files/Pods-PaymentDashboard/Pods-PaymentDashboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +258,7 @@
 			children = (
 				51B163BB2885613700D4291F /* ChartView.xib */,
 				51B163BD2885614700D4291F /* ChartView.swift */,
+				519AA151288869BE00BDEBB5 /* ChartViewData.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -283,18 +284,9 @@
 		51B163D12886EE5D00D4291F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				51B163D62886F04000D4291F /* BasicViewModel */,
 				51B163D72886F04C00D4291F /* PaymentDashboardVCViewModel */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		51B163D62886F04000D4291F /* BasicViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				51B163D42886EECF00D4291F /* BasicViewModel.swift */,
-			);
-			path = BasicViewModel;
 			sourceTree = "<group>";
 		};
 		51B163D72886F04C00D4291F /* PaymentDashboardVCViewModel */ = {
@@ -494,11 +486,11 @@
 				5100EF2D28848EED0040EC0E /* AppDelegate.swift in Sources */,
 				5184F6192884C9FB0066C65D /* PaymentInfo.swift in Sources */,
 				5184F60C2884AE040066C65D /* FontService.swift in Sources */,
-				51B163D52886EECF00D4291F /* BasicViewModel.swift in Sources */,
 				5184F5F62884980B0066C65D /* UIView+FixInContainer.swift in Sources */,
 				51B163D32886EE8600D4291F /* PaymentDashboardVCViewModel.swift in Sources */,
 				51B163D02885A73400D4291F /* ChartValueFormater.swift in Sources */,
 				5100EF2F28848EED0040EC0E /* SceneDelegate.swift in Sources */,
+				519AA152288869BE00BDEBB5 /* ChartViewData.swift in Sources */,
 				5184F5FD28849A4F0066C65D /* PersonInfoTableViewCell.swift in Sources */,
 				51B163B828855C1900D4291F /* DataBaseManager.swift in Sources */,
 			);
